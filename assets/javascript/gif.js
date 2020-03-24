@@ -47,7 +47,7 @@ $(document).ready(function () {
             $(".buttons").append(createButtons);
         }
     }
-
+// i got the gifs to each have a class but i could not get them to stop animateing to click on them to animate.
     $(".gif").on("click" , function() {
         var state = $("<img>").attr("data-state")
         console.log(state)
