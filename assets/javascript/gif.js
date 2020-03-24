@@ -8,6 +8,7 @@ $(document).ready(function () {
 
     function displayInfo() {
         $("#gifsHere").empty();
+        
 
         var animal = $(this).attr("data-name");
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=FGAcnEy80wTvmhfMwUDIFC3UhKqzg7tO&limit=25"
@@ -23,7 +24,9 @@ $(document).ready(function () {
             console.log(response.data)
             for (var i = 0; i < results.length; i++) {
                 var newAnimalDiv = $("#gifsHere");
-                var animalImage = $("<img>")
+                var animalImage = $("<img class='gif'>")
+                
+                
                 console.log(results[i].images)
             
                 animalImage.attr("src", results[i].images.fixed_height.url);
@@ -45,29 +48,29 @@ $(document).ready(function () {
         }
     }
 
-    $("#gifsHere").on("click" , function() {
-        var state = $(this).attr("data-state");
-        if (state === "still") {
+    $(".gif").on("click" , function() {
+        var state = $("<img>").attr("data-state")
+        console.log(state)
+        if (state === "animate") {
+            var animateURL = $(this).attr("data-name")
             $(this).attr("src" , $(this).attr("data-animate"));
             $(this).attr("data-state" , "animate");
         }else {
             $(this).attr("src" , $(this).attr("data-still"));
             $(this).attr("data-state" , "still");
-        }
+        };
     });
 
     $("#add-animal").on("click" , function() {
         event.preventDefault();
         var newAnimal = $("#animal-input").val().trim();
-        animals.push(newAnimal)
-        renderButtons();
-        // if (animals.toString().toLowerCase().indexOf(newAnimal.toLowerCase())!= -1) {
-        //     console.log(animals.toString().toLowerCase().indexOf(newAnimal.toLowerCase()))
-        //     alert("Animal already exists!");
-        // } else{
-        //     animals.push(newAnimal);
-        //     renderButtons();
-        // };
+        if (animals.indexOf(newAnimal.toLowerCase())!= -1) {
+            console.log(animals.toString().toLowerCase().indexOf(newAnimal.toLowerCase()))
+            alert("Animal already exists!");
+        } else{
+            animals.push(newAnimal);
+            renderButtons();
+        };
     });
 
    

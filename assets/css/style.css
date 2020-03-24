@@ -1,0 +1,70 @@
+#body {
+    padding-right: 90px;
+    padding-left: 90px;
+    margin-top: 40px;
+}
+
+.buttons {
+    padding: 10px;
+    padding-right: 30px;
+    margin-left: 20px;
+    border: 2px;
+    border-color:skyblue;
+    border-style: groove;
+    align-content: center;
+    box-shadow: whitesmoke;
+    background-color: white;
+    box-shadow: black 2px 2px;
+}
+
+.lead {
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 15px;
+}
+#buttonRow {
+    margin-left: 400px;
+  
+    
+}
+.display-4 {
+    font-size: 90px;
+    
+}
+
+.jumbotron {
+    text-align: center;
+    font-family: 'Liu Jian Mao Cao', cursive;
+    background-color: lightcyan;
+    box-shadow: black 3px 3px 3px;
+}
+
+#gifsHere {
+    padding: 20px;
+    margin-top: 40px;
+    border: skyblue 4px;
+    border-style: groove;
+    background: lightcyan;
+    box-shadow: black 2px 2px;
+
+}
+#h2 {
+    font-family: 'Liu Jian Mao Cao', cursive;
+}
+#animal-form {
+    font-family: 'Rubik Mono One', sans-serif;
+
+}
+.btn {
+    margin: 5px;
+    font-family: 'Rubik Mono One', sans-serif;
+    
+}
+.col-lg-4 {
+    margin-top: 40px;
+    padding: 20px;
+    border: skyblue 6px;
+    border-style: groove;
+    background: lightcyan;
+    box-shadow: black 5px 5px;
+    
+}
